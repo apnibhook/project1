@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - ConstructEstimates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Main Projects Section */
+        .projects-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .projects-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .projects-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #4CAF50;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .project-content p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9rem;
+            padding: 1rem;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .projects-header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-container {
+                padding: 0 1rem;
+            }
+            
+            .projects-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% include 'base.html' %}
+    
+    <main class="projects-container">
+        <div class="projects-header">
+            <h1>Our Projects</h1>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1600585152225-9037655a0926');"></div>
+                <div class="project-content">
+                    <h3>Business Banking</h3>
+                    <p>Commercial Banking solutions tailored for construction industry needs.</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154');"></div>
+                <div class="project-content">
+                    <h3>Sales Committees</h3>
+                    <p>Board Group 2 initiatives for sales optimization and strategy.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1600566752227-8f1634b27569');"></div>
+                <div class="project-content">
+                    <h3>Home Committees</h3>
+                    <p>Board Group 3 residential construction planning and development.</p>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d');"></div>
+                <div class="project-content">
+                    <h3>Mobile Committees</h3>
+                    <p>Board Group 4 mobile solutions for construction management.</p>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154');"></div>
+                <div class="project-content">
+                    <h3>Dilution Committees</h3>
+                    <p>Board Group 5 financial strategies for construction projects.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Let's Discuss Your Construction Estimating Needs</h2>
+            <p>The Company has a number of business guidelines, including the Board and its management team. The company is responsible for managing business guidelines, including the Board and its management team.</p>
+            <a href="{{ url_for('contact_us') }}" class="cta-button">Get Started</a>
+        </div>
+        
+       
+    </main>
+    
+    {% include 'base2.html' %}
+</body>
+</html>

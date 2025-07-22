@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construct Editions - Precise Construction Budgeting</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #4CAF50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        
+
+        /* Footer Section */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .address-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .address-icon {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .address-text {
+            flex: 1;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 5%;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                gap: 0.8rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column {
+                text-align: center;
+            }
+            
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .address-item {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Headquarters</h3>
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt address-icon"></i>
+                    <div class="address-text">2000 Taylor St., Houston, TX 77000, United States</div>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Australia Office</h3>
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt address-icon"></i>
+                    <div class="address-text">1st Royal Terrace, Craigstown VIC 3044</div>
+                </div>
+                <div class="address-item">
+                    <i class="fas fa-phone address-icon"></i>
+                    <div class="address-text">CH6B 660-2440</div>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Canada Office</h3>
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt address-icon"></i>
+                    <div class="address-text">2 Simons B & SK20, Oshawa, ONL UK EK1, Canada</div>
+                </div>
+                <div class="address-item">
+                    <i class="fas fa-phone address-icon"></i>
+                    <div class="address-text">0458 643 274</div>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <div class="address-item">
+                    <i class="fas fa-phone address-icon"></i>
+                    <div class="address-text">0385 639 7238</div>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            Copyright &copy; 2023. All right reserved - Construct Editions
+        </div>
+    </footer>
+</body>
+</html>
